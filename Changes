@@ -1,5 +1,9 @@
 Revision history for Perl extension Class::DBI::AbstractSearch
 
+0.05  Wed Apr  7 18:30:27 JST 2004
+	- renamed 'order' to 'order_by', used in Class::DBI's search
+	  (Thanks to Hajime Sugawara)
+
 0.04  Thu Feb 19 19:00:53 JST 2004
 	- Fixed some typos.
 	  (Thanks to Jay Strauss)
