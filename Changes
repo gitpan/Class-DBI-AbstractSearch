@@ -1,5 +1,11 @@
 Revision history for Perl extension Class::DBI::AbstractSearch
 
+0.04  Thu Feb 19 19:00:53 JST 2004
+	- Fixed some typos.
+	  (Thanks to Jay Strauss)
+	* Added support for SQL::Abstract->new() option
+	  (Thanks to darren chamberlain)
+
 0.03  Wed Jul 30 20:49:28 JST 2003
 	- Fixed warnings for repeated 'my $where'
 
