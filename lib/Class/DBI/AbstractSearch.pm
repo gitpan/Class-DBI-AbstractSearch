@@ -2,7 +2,7 @@ package Class::DBI::AbstractSearch;
 
 use strict;
 use vars qw($VERSION @EXPORT);
-$VERSION = 0.02;
+$VERSION = 0.03;
 
 require Exporter;
 *import = \&Exporter::import;
@@ -21,9 +21,9 @@ sub search_where {
 	Carp::croak("$class should inherit from Class::DBI >= 0.90");
     };
     my $sql = SQL::Abstract->new; # XXX how do we supply options here?
-    my($where, @bind) = $sql->where($where,$order);
-    $where =~ s/^\s*WHERE\s*//i;
-    return $class->retrieve_from_sql($where, @bind);
+    my($where_sql, @bind) = $sql->where($where,$order);
+    $where_sql =~ s/^\s*WHERE\s*//i;
+    return $class->retrieve_from_sql($where_sql, @bind);
 }
 
 1;
